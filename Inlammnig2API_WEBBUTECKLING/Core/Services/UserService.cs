@@ -28,7 +28,7 @@ namespace Inlammnig2API_WEBBUTECKLING.Core.Services
 
             var user = new Users
             {
-                Name = dto.Name,
+                UserName = dto.Name,
                 Email = dto.Email,
                 Password = dto.Password
             };
@@ -37,7 +37,7 @@ namespace Inlammnig2API_WEBBUTECKLING.Core.Services
         }
 
 
-      
+
         public string Logon(LogonDTO dto)
         {
             var user = _userRepo.GetUserByemail(dto.Email);
@@ -69,4 +69,4 @@ namespace Inlammnig2API_WEBBUTECKLING.Core.Services
 
     }
 }
-    
+

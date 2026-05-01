@@ -3,7 +3,7 @@ using Inlammnig2API_WEBBUTECKLING.Data.Enteties;
 using Inlammnig2API_WEBBUTECKLING.Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-public class PostRepo: IPostRepo
+public class PostRepo : IPostRepo
 {
     private readonly AppDbContext _context;
 
@@ -23,8 +23,8 @@ public class PostRepo: IPostRepo
     public Posts GetPostById(int id)
     {
         return _context.Posts
-            .Include(p=>p.User)
-            .Include(p=>p.Category)
+            .Include(p => p.User)
+            .Include(p => p.Category)
             .FirstOrDefault(p => p.Id == id);
     }
 
@@ -62,4 +62,4 @@ public class PostRepo: IPostRepo
             .Where(p => p.Title.Contains(keyword) || p.Content.Contains(keyword))
             .ToList();
     }
-} 
+}

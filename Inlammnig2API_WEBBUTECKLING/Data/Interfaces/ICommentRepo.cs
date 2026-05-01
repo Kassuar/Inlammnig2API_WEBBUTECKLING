@@ -6,7 +6,7 @@ namespace Inlammnig2API_WEBBUTECKLING.Interfaces
 
     {
         Comments CreateComment(Comments comment);
-        List<Comments> GetCommentsByPostId (int PostId);
+        List<Comments> GetCommentsByPostId(int PostId);
         Comments GetCommentById(int id);
         bool DeleteComment(int id);
 

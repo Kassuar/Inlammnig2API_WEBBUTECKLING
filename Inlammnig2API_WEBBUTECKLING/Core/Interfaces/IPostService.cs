@@ -8,7 +8,7 @@ namespace Inlammnig2API_WEBBUTECKLING.Interfaces
         Posts CreatePost(PostDTO dto);
         List<Posts> GetAllPosts();
         Posts GetPostById(int id);
-        Posts UpdatePost(int id,PostDTO dto);
+        Posts UpdatePost(int id, PostDTO dto);
         bool DeletePost(int id);
         List<Posts> SearchPosts(string keyword);
 

@@ -1,3 +1,4 @@
+using Inlammnig2API_WEBBUTECKLING;
 using Inlammnig2API_WEBBUTECKLING.Core.Services;
 using Inlammnig2API_WEBBUTECKLING.Data;
 using Inlammnig2API_WEBBUTECKLING.Data.Interfaces;
@@ -45,7 +46,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-// Dependency Injection
+//Dependency Injection
 builder.Services.AddScoped<IUserRepo, UserRepo>();
 builder.Services.AddScoped<IPostRepo, PostRepo>();
 builder.Services.AddScoped<ICommentRepo, CommentRepo>();
@@ -54,7 +55,8 @@ builder.Services.AddScoped<ICategoryRepo, CategoryRepo>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IPostService, PostService>();
 builder.Services.AddScoped<ICommentService, CommentService>();
-builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>(); 
+builder.Services.AddScoped<IDBSeeder,DataSeeder>();
 
 var app = builder.Build();
 
@@ -77,5 +79,7 @@ app.UseCors(options =>
 
 // Controllers
 app.MapControllers();
+
+app.SeedDatabase();
 
 app.Run();

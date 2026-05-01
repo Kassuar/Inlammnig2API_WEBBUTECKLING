@@ -5,7 +5,7 @@ namespace Inlammnig2API_WEBBUTECKLING.Core.Services
 {
     public interface ICommentService
     {
-         
+
         Comments CreateComment(CommentDTO dto);
 
         List<Comments> GetCommentsByPostId(int postId);

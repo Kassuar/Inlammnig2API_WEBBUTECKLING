@@ -17,7 +17,7 @@ namespace Inlammnig2API_WEBBUTECKLING.Controllers
             _categoryService = categoryService;
         }
 
-        [HttpPost ("Create")]
+        [HttpPost("Create")]
 
         public IActionResult CreateCategory([FromBody] CategoryDTO dto)
         {
@@ -29,12 +29,12 @@ namespace Inlammnig2API_WEBBUTECKLING.Controllers
             return Created($"api/post/{result.Id}", result);
         }
 
-       [HttpGet("GetAll")]
+        [HttpGet("GetAll")]
 
         public IActionResult GetAllCategories()
         {
-          var result = _categoryService.GetAllCategories();
-          return Ok(result);
+            var result = _categoryService.GetAllCategories();
+            return Ok(result);
 
         }
     }

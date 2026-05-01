@@ -24,13 +24,13 @@ namespace Inlammnig2API_WEBBUTECKLING.Controllers
         [HttpPost]
         public IActionResult CreatePost([FromBody] PostDTO dto)
         {
-            
+
             var result = _postService.CreatePost(dto);
 
             if (result == null)
                 return BadRequest("Failed to create post");
 
-            return Created( $"api/post/{result.Id}",result);
+            return Created($"api/post/{result.Id}", result);
         }
 
         [HttpGet]

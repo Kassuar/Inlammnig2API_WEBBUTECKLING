@@ -3,12 +3,12 @@
 
 namespace Inlammnig2API_WEBBUTECKLING.Data.Interfaces
 {
-    public interface ICategoryRepo 
+    public interface ICategoryRepo
     {
         Categories CreateCategory(Categories category);
         List<Categories> GetAllCategories();
         Categories GetCategoryById(int id);
-      
+
 
 
 

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Inlammnig2API_WEBBUTECKLING.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260305192819_InitialCreate")]
+    [Migration("20260416170823_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -118,11 +118,11 @@ namespace Inlammnig2API_WEBBUTECKLING.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

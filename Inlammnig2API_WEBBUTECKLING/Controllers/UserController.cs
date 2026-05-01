@@ -35,10 +35,10 @@ namespace Inlammnig2API_WEBBUTECKLING.Controllers
         {
             var token = _userService.Logon(dto);
 
-            if(token == null)
+            if (token == null)
                 return Unauthorized("Invalid email or password");
 
-            return Ok(new {token=token });
+            return Ok(new { token = token });
         }
 
     }

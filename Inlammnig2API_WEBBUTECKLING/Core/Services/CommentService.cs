@@ -6,17 +6,17 @@ using Inlammnig2API_WEBBUTECKLING.Interfaces;
 
 namespace Inlammnig2API_WEBBUTECKLING.Core.Services
 {
-   
-        public class CommentService: ICommentService
-    {
-            private readonly ICommentRepo _commentRepo;
-            private readonly IPostRepo _postRepo;
 
-            public CommentService(ICommentRepo commentRepo, IPostRepo postRepo)
-            {
-                _commentRepo = commentRepo;
-                _postRepo = postRepo;
-            }
+    public class CommentService : ICommentService
+    {
+        private readonly ICommentRepo _commentRepo;
+        private readonly IPostRepo _postRepo;
+
+        public CommentService(ICommentRepo commentRepo, IPostRepo postRepo)
+        {
+            _commentRepo = commentRepo;
+            _postRepo = postRepo;
+        }
 
 
 
@@ -41,17 +41,17 @@ namespace Inlammnig2API_WEBBUTECKLING.Core.Services
             return _commentRepo.CreateComment(comment);
         }
 
-               
-            
 
-            public List<Comments> GetCommentsByPostId(int postId)
-            {
-                return _commentRepo.GetCommentsByPostId(postId);
-            }
 
-            public bool DeleteComment(int id)
-            {
-                return _commentRepo.DeleteComment(id);
-            }
+
+        public List<Comments> GetCommentsByPostId(int postId)
+        {
+            return _commentRepo.GetCommentsByPostId(postId);
+        }
+
+        public bool DeleteComment(int id)
+        {
+            return _commentRepo.DeleteComment(id);
+        }
     }
 }
